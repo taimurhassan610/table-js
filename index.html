@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Table</h1><br><br>
+    <div>
+        <p>Please enter a number:</p>
+        <input type="number" id="num">
+        <p>Please enter how many times should it be</p>
+        <input type="number" id="tim">
+        <button onclick="doe()">Submit</button><br><br>
+        <div>
+            <p id="tab"></p>
+        </div>
+        <script>
+            function doe() {
+                let res = document.getElementById('tab')
+                let numb = document.querySelector('#num').value
+                let time = document.querySelector('#tim').value
+                for (let i = 0; i < time; i++){
+                    console.log(`${numb}x${(i + 1)}=${numb * (i + 1)}`)
+                    res.innerHTML += `${numb}x${(i + 1)}=${numb * (i + 1)}<br>`
+                }
+                
+            }
+        </script>
+    </div>
+</body>
+
+</html>
